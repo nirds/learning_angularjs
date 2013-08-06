@@ -1,0 +1,12 @@
+{
+  "name": "AngularJS",
+  "description": "An AngularJS training course on the fundamentals of AngularJS",
+  "sections": [
+    {"section":"introduction"},
+    {"section":"data binding"},
+    {"section":"controllers"},
+    {"section":"directives"},
+    {"section":"filters"},
+    {"section":"external services"}
+  ]
+}
