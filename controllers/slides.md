@@ -1,6 +1,6 @@
 !SLIDE
 # Controllers #
-Business logic and behavior are defined in controllers
+Business logic and behavior is defined in controllers
 
 !SLIDE smbullets
 # Benefits #
