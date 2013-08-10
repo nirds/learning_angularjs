@@ -8,12 +8,6 @@
 * Highly structured
 * Extensible
 
-!SLIDE smbullets
-# Typical use cases: #
-
-!SLIDE smbullets
-# Benefits: #
-
 !SLIDE smaller
 # Getting Started #
 
@@ -40,12 +34,20 @@
       Your card number is: {{credit_card_number}}
     </label>
 
+!SLIDE small
+# Filter #
+    @@@ html
+    <input type="number" ng-model="amount">
+    {{amount | currency}}
+
 !SLIDE smaller
 # Click events #
     @@@ html
-    <button ng:click='randomCase()'>
-      {{crazyText}}
-    </button>
+    <div ng:controller=FirstController>
+      <button ng:click='randomCase()'>
+        {{crazyText}}
+      </button>
+    </div>
 
     <script>
       function FirstController($scope){
@@ -61,9 +63,3 @@
         };
       }
     </script>
-
-!SLIDE small
-# Converting input #
-    @@@ html
-    <input type="number" ng-model="amount">
-    {{amount | currency}}

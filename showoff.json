@@ -3,10 +3,10 @@
   "description": "An AngularJS training course on the fundamentals of AngularJS",
   "sections": [
     {"section":"introduction"},
+    {"section":"filters"},
     {"section":"data binding"},
     {"section":"controllers"},
     {"section":"directives"},
-    {"section":"filters"},
     {"section":"external services"}
   ]
 }
