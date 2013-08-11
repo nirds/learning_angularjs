@@ -29,3 +29,6 @@ git checkout services_json
 
 !SLIDE center
 ![json](json.png)
+
+!SLIDE
+## Consuming JSONP ##

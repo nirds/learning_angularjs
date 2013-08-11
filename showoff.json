@@ -6,7 +6,7 @@
     {"section":"data binding"},
     {"section":"controllers"},
     {"section":"filters"},
-    {"section":"directives"},
-    {"section":"external services"}
+    {"section":"external services"},
+    {"section":"directives"}
   ]
 }
