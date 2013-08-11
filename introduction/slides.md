@@ -55,11 +55,11 @@
 
         $scope.randomCase = function(){
           var array = $scope.carzyText.split('');
-          for(var i=0; i < string.length; i ++){
+          for(var i=0; i < array.length; i ++){
             array[i] = Math.round(Math.random()) == 1 ?
               array[i].toUpperCase(): array[i].toLowerCase()
           };
-          return array.join(' ')
+          return array.join('')
         };
       }
     </script>
