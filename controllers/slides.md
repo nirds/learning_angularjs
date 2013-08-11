@@ -68,6 +68,50 @@ git checkout controllers_basics
 !SLIDE code
 git checkout controllers_forms
 
+!SLIDE smaller
+    @@@ html
+    <div ng-controller='MyController'>
+      <form ng-submit='addItem()'>
+        <input type="text" ng-model="itemText">
+
+        <button type='submit'>
+          Add
+        </button>
+
+        <button ng-click='clearItems()' form='#'>
+          Clear all items
+        </button>
+      </form>
+
+      <ul>
+        <li ng-repeat='item in items'>
+          {{item.text}}
+        </li>
+      </ul>
+    </div>
+
+!SLIDE smaller
+    @@@ javascript
+    function MyController($scope){
+      $scope.items = [
+        {text: 'Initialized in the controller'},
+        {text: 'Also Initialized in the controller'}
+      ];
+
+      $scope.addItem = function(){
+        $scope.items.push({text: $scope.itemText});
+        $scope.itemText = '';
+      };
+
+      $scope.clearItems = function(){
+        $scope.itemText = '';
+        $scope.items = [];
+      }
+    }
+
+!SLIDE center
+![forms](controller_forms.png)
+
 !SLIDE
 # Urls, routing and templates #
 
