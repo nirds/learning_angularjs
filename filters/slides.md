@@ -37,11 +37,25 @@ git checkout filters_basics
 
 !SLIDE smaller
 # Reducing elements of array #
+
+!SLIDE smaller
+    @@@javascript
+    app.controller('MyController', function($scope){
+      $scope.entries = [
+        {text: 'One'},
+        {text: 'Two'},
+        {text: 'Three'},
+        {text: 'Four'},
+        {text: 'Five'}
+      ]
+    });
+
+!SLIDE smaller
     @@@html
     <input type='text' ng:model='search'>
     <ul>
       <li ng:repeat='entry in entries | filter:search'>
-        {{product.name}}
+        {{entry.name}}
       </li>
     </ul>
 

@@ -8,15 +8,7 @@
 git checkout services_json
 
 !SLIDE smaller
-    @@@ html
-    <body ng-app ng-controller='MyController'>
-      <div ng-repeat='person in people'>
-        {{person.firstName}}
-      </div>
-    </body>
-
-!SLIDE smaller
-    @@@javascript
+    @@@ javascript
     function MyController($scope, $http){
       $http.get('json/people.json').
       success(function(data, status, headers, config){
@@ -26,6 +18,14 @@ git checkout services_json
         console.error('Could not load people')
       });
     };
+
+!SLIDE smaller
+    @@@ html
+    <body ng-app ng-controller='MyController'>
+      <div ng-repeat='person in people'>
+        {{person.firstName}}
+      </div>
+    </body>
 
 !SLIDE center
 ![json](json.png)
