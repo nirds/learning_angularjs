@@ -3,9 +3,10 @@
 
 !SLIDE
 ## Consuming JSON ##
+Fetching JSON within your domain
 
 !SLIDE code
-git checkout services_json
+cd service_json
 
 !SLIDE smaller
     @@@ javascript
@@ -32,6 +33,10 @@ git checkout services_json
 
 !SLIDE
 ## Consuming JSONP ##
+Fetching JSON outside your domain
+
+!SLIDE code
+cd service_jsonp
 
 !SLIDE smaller
     @@@html
@@ -41,7 +46,7 @@ git checkout services_json
 !SLIDE smaller
     @@@ html
     <body ng-app="MyApp">
-      <div class="panel" ng-controller='MyController'>
+      <div ng-controller='MyController'>
         <input type='text' ng-model='searchTerm'>
 
         <button ng-click='search()'>
@@ -50,7 +55,7 @@ git checkout services_json
 
 
         <div ng-repeat='result in searchResults'>
-          <div class='panel-heading'>{{searchTerm}}</div>
+          <div>{{searchTerm}}</div>
           {{result.c}}
         </div>
       </div>
@@ -81,6 +86,9 @@ git checkout services_json
 
 !SLIDE
 ## Consuming RESTful services ##
+
+!SLIDE
+cd service_rest
 
 !SLIDE smaller
     @@@javascript

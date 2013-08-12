@@ -4,22 +4,31 @@
 !SLIDE smbullets
 # Aug 12, 2013 #
 * View slides at: http://sleepy-scrubland-2425.herokuapp.com/#1
-* Clone seed app so you can do exercises: https://github.com/nirds/angular_seed_app
+* Clone seed app so you can do exercises:
+  * [https://github.com/cherimarie/ang\_big\_seed\_app](https://github.com/cherimarie/ang_big_seed_app)
 * 10am - 11:30 Presentation
-* 11am Break 
+* 11am Break
 * 11:30 - 12pm Q&A
-* Angular documentation: http://docs.angularjs.org/
+* Angular documentation:
+  * [http://docs.angularjs.org/](http://docs.angularjs.org/)
 
 !SLIDE smbullets
 # What is AngularJS? #
-* Client site MVC
+* Client site MVW
 * Declarative extension of HTML
 * Highly structured
 * Extensible
 
+!SLIDE smbullets
+# Main benefits #
+* High level abstraction
+* Event management
+* No watching DOM for changes
+* No setting up callbacks
+* Self contained
+
 !SLIDE smaller
 # Getting Started #
-
     @@@ html
     <html>
       <head>
@@ -37,7 +46,7 @@
 # Data model binding #
 
     @@@ html
-    <input type='text' ng:model='credit_card_number'></input>
+    <input type='text' ng-model='credit_card_number'></input>
 
     <label>
       Your card number is: {{credit_card_number}}
@@ -58,17 +67,17 @@
       </button>
     </div>
 
-    <script>
-      function FirstController($scope){
-        $scope.crazyText = 'Click me to randomize my casing'
+!SLIDE smaller
+    @@@javascript
+    function FirstController($scope){
+      $scope.crazyText = 'Click me to randomize my casing'
 
-        $scope.randomCase = function(){
-          var array = $scope.carzyText.split('');
-          for(var i=0; i < array.length; i ++){
-            array[i] = Math.round(Math.random()) == 1 ?
-              array[i].toUpperCase(): array[i].toLowerCase()
-          };
-          return array.join('')
+      $scope.randomCase = function(){
+        var array = $scope.carzyText.split('');
+        for(var i=0; i < array.length; i ++){
+          array[i] = Math.round(Math.random()) == 1 ?
+            array[i].toUpperCase(): array[i].toLowerCase()
         };
-      }
-    </script>
+        return array.join('')
+      };
+    }

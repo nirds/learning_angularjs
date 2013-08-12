@@ -4,6 +4,9 @@
 !SLIDE
 ## Broadcasting events downwards ##
 
+!SLIDE code
+cd events_broadcast
+
 !SLIDE smaller
     @@@html
     <body ng-app='MyApp'>
@@ -58,8 +61,10 @@ Dispatches an event name downwards to all child scopes (and their children) noti
 The event cannot be canceled.
 
 !SLIDE
-## Broadcasting events upwards ##
+## Emit events upwards ##
 
+!SLIDE code
+cd events_emit
 
 !SLIDE smaller
     @@@html

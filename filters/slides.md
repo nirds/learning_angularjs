@@ -3,8 +3,7 @@
 Transform or reduce input
 
 !SLIDE code
-git clone git@github.com:nirds/angular\_seed\_app.git
-git checkout filters_basics
+cd filters_basics
 
 !SLIDE smaller
 # Transforming input #
@@ -40,6 +39,8 @@ git checkout filters_basics
 
 !SLIDE smaller
     @@@javascript
+    var app = angular.module("MyApp", []);
+
     app.controller('MyController', function($scope){
       $scope.entries = [
         {text: 'One'},

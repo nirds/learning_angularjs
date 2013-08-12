@@ -1,6 +1,8 @@
 !SLIDE
 # Controllers #
-Business logic and behavior is defined in controllers
+Business logic is defined in controllers in the MVC sense.
+
+Controllers respond to events and can be stateful.
 
 !SLIDE smbullets
 # Benefits #
@@ -9,18 +11,19 @@ Business logic and behavior is defined in controllers
 * No watching the DOM for changes
 
 !SLIDE code
-git clone git@github.com:nirds/angular\_seed\_app.git
-git checkout controllers_basics
+cd controllers\_basic\_forms
 
 !SLIDE
 # Initialize variables #
 
 !SLIDE smaller
     @@@ html
-    <input type='text' ng-model="important_information">
-    <label>
-      {{important_information}}
-    </label>
+    <div ng-controller='MyController'>
+      <input type='text' ng-model="important_information">
+      <label>
+        {{important_information}}
+      </label>
+    </div>
 
 !SLIDE smaller
     @@@ javascript
@@ -36,9 +39,11 @@ git checkout controllers_basics
 
 !SLIDE smaller
     @@@ html
-    <button ng-click='randomizeCase()'>
-      Randomize case!
-    </button>
+    <div ng-controller='MyController'>
+      <button ng-click='randomizeCase()'>
+        Randomize case!
+      </button>
+    </div>
 
 !SLIDE smaller
     @@@ javascript
@@ -65,18 +70,13 @@ git checkout controllers_basics
 !SLIDE
 # Submitting forms #
 
-!SLIDE code
-git checkout controllers_forms
-
 !SLIDE smaller
     @@@ html
     <div ng-controller='MyController'>
       <form ng-submit='addItem()'>
         <input type="text" ng-model="itemText">
 
-        <button type='submit'>
-          Add
-        </button>
+        <button>Add</button>
 
         <button ng-click='clearItems()' form='#'>
           Clear all items
@@ -116,7 +116,7 @@ git checkout controllers_forms
 # Urls, routing and templates #
 
 !SLIDE code
-git checkout controllers_routing
+cd controllers_routing
 
 !SLIDE smaller
     @@@ javascript

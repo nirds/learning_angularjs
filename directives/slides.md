@@ -1,9 +1,12 @@
 !SLIDE
 # Directives #
-Extend the behavior of HTML
+Extend the behavior of HTML by either creating new elements or by augmenting existing elements.
 
 !SLIDE
-## Creating new element ##
+## Creating a new element ##
+
+!SLIDE
+cd directives_e
 
 !SLIDE smaller
     @@@html
@@ -55,6 +58,9 @@ Extend the behavior of HTML
 
 !SLIDE
 ## Extending the behavior of elements ##
+
+!SLIDE
+cd directives_e
 
 !SLIDE smaller
     @@@html
