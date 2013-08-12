@@ -2,6 +2,15 @@
 ![angularjs](angularjs.png)
 
 !SLIDE smbullets
+# Aug 12, 2013 #
+* View slides at: http://sleepy-scrubland-2425.herokuapp.com/#1
+* Clone seed app so you can do exercises: https://github.com/nirds/angular_seed_app
+* 10am - 11:30 Presentation
+* 11am Break 
+* 11:30 - 12pm Q&A
+* Angular documentation: http://docs.angularjs.org/
+
+!SLIDE smbullets
 # What is AngularJS? #
 * Client site MVC
 * Declarative extension of HTML
