@@ -2,7 +2,7 @@
 # Events #
 
 !SLIDE
-## Communicating between controllers ##
+## Broadcasting events downwards ##
 
 !SLIDE smaller
     @@@html
@@ -50,3 +50,69 @@
 
 !SLIDE center
 ![broadcast event](broadcast_event.png)
+
+!SLIDE
+## $broadcast(name, args) ##
+Dispatches an event name downwards to all child scopes (and their children) notifying the registered listeners.
+
+The event cannot be canceled.
+
+!SLIDE
+## Broadcasting events upwards ##
+
+
+!SLIDE smaller
+    @@@html
+    <div ng-controller='DashboardCtrl'>
+      <div ng-controller='ActivityCtrl'>
+        <div>
+          <div ng-click='left()'>
+            Left
+          </div>
+          <div ng-click='right()'>
+            Right
+          </div>
+        </div>
+      </div>
+
+      <ul>
+        <li ng-repeat='event in events'>
+          {{$index + 1}} - {{event}}
+        </li>
+      </ul>
+    </div>
+
+!SLIDE smaller
+    @@@javascript
+    var app = angular.module("MyApp", []);
+
+    app.controller('DashboardCtrl', function($scope){
+      $scope.events = [];
+
+      $scope.$on('activity:click', function(event, activity){
+        $scope.events.push(activity);
+      });
+    });
+
+    app.controller('ActivityCtrl', function($scope){
+      $scope.emit_event = function(activity){
+        $scope.$emit('activity:click', activity);
+      };
+
+      $scope.left = function(){
+        $scope.emit_event('left');
+      };
+
+      $scope.right = function(){
+        $scope.emit_event('right');
+      };
+    });
+
+!SLIDE center
+![emit event](emit_event.png)
+
+!SLIDE
+## $emit ##
+Dispatches an event name upwards through the scope hierarchy notifying the registered listeners.
+
+The event can be cancelled.
