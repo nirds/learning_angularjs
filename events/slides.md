@@ -121,3 +121,10 @@ cd events_emit
 Dispatches an event name upwards through the scope hierarchy notifying the registered listeners.
 
 The event can be cancelled.
+
+!SLIDE smbullets smaller
+# Exercise #
+* Create two controllers
+* Transfer a rabbit from one to the other using events
+* Visually indicate which controller the rabbit is in
+* either $broadcast or $emit the rabbit

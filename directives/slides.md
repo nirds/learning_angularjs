@@ -104,3 +104,10 @@ cd directives_e
 
 !SLIDE center
 ![a directives](a_directives.png)
+
+!SLIDE smaller smbullets
+# Exercise #
+* cd directives\_e\_exercise
+* Create your own directive
+* The directive must be restricted to elements
+* The directive must randomly display three different images of your choosing
