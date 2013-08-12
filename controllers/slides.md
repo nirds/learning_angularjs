@@ -112,6 +112,14 @@ cd controllers\_basic\_forms
 !SLIDE center
 ![forms](controller_forms.png)
 
+!SLIDE smbullets smaller
+# Exercise #
+* cd controller\_basic\_forms
+* create a form that takes two numbers as inputs
+* when the form submits the page must output the entire addition operation
+  * e.g. if 3 and 5 are your inputs, the output will be: "3 + 5 = 8"
+* The page should also show all historical calculations
+
 !SLIDE
 # Urls, routing and templates #
 
@@ -193,3 +201,11 @@ cd controllers_routing
 !SLIDE center
 ## show.html ##
 ![routing show](routing_show.png)
+
+!SLIDE smbullets smaller
+# Exercise #
+* cd controller\_routing\_exercise
+* Create a celebrity directory
+* The index page should show all the celebrity names
+* The show page should show the address and telephone number
+* Use templates and angular routing

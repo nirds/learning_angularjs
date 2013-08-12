@@ -62,3 +62,9 @@ cd filters_basics
 
 !SLIDE center
 ![array filter](array_filter.png)
+
+!SLIDE smaller smbullets
+# Exercise #
+* cd filters\_basics\_exercise
+* implement your own custom filter
+* the filter must camel case the input
