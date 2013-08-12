@@ -8,6 +8,7 @@
       {{name}}
     </div>
 
-!SLIDE code
-git clone git@github.com:nirds/angular\_seed\_app.git
-git checkout master
+!SLIDE exercise
+# Exercise #
+* From your seed app's databind branch, create a new branch called "yourname_databind"
+* Using the slide as a guide, make the form say something super nice to the user. 
