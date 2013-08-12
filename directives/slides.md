@@ -52,3 +52,49 @@ Extend the behavior of HTML
         }
       };
     });
+
+!SLIDE
+## Extending the behavior of elements ##
+
+!SLIDE smaller
+    @@@html
+    <body ng-app="MyApp">
+      <ul wrap='li' uppercase>
+        the highest case of them all
+      </ul>
+    </body>
+
+!SLIDE smaller
+    @@@javascript
+    var app = angular.module("MyApp", []);
+
+    app.directive('uppercase', function(){
+      return {
+        restrict: "A",
+        link: function(scope, element, attributes){
+          var target = element[0];
+          target.innerHTML = target.innerHTML.toUpperCase();
+        }
+      };
+    });
+
+!SLIDE smaller
+    @@@javascript
+    app.directive('wrap', function(){
+      return {
+        restrict: "A",
+        link: function(scope, element, attributes){
+          var wrap    = attributes['wrap'],
+              opening = '<' + wrap + '>',
+              closing = '</' + wrap + '>',
+              target  = element[0];
+
+          target.innerHTML = [
+            opening, target.innerHTML, closing
+          ].join('');
+        }
+      };
+    });
+
+!SLIDE center
+![a directives](a_directives.png)
